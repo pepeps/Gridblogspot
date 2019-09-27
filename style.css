@@ -7,12 +7,13 @@ body {
 .container {
 
     display:grid;
-    grid-template: repeat(3 ,1fr) / repeat(3, 1fr);
+    grid-template: repeat(4 ,1fr) / repeat(3, 1fr);
     height: 100vh;
     grid-gap:10px;
     grid-template-areas:  "Header Header Header"
                           "Nav Container-left Container-right"
-                          "Nav Footer Footer" ;
+                          "Nav Footer Footer " 
+                          "Contact Contact Contact";
 }
 
 .item {
@@ -36,6 +37,10 @@ body {
 }
 .item:nth-of-type(5) {
       grid-area: Footer;
+}
+
+.item:nth-of-type(6) {
+    grid-area: Contact;
 }
 
 
