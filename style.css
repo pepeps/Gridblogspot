@@ -3,3 +3,40 @@ body {
     font-family: "Arial";
     background: rosybrown;
 }
+
+.container {
+
+    display:grid;
+    grid-template: repeat(3 ,1fr) / repeat(3, 1fr);
+    height: 100vh;
+    grid-gap:10px;
+    grid-template-areas:  "Header Header Header"
+                          "Nav Container-left Container-right"
+                          "Nav Footer Footer" ;
+}
+
+.item {
+    border: 1px solid black;
+}
+
+.item:nth-of-type(1) {
+     grid-area: Header;
+}
+
+.item:nth-of-type(2) {
+    grid-area: Nav;
+}
+
+.item:nth-of-type(3) {
+    grid-area: Container-left;
+}
+
+.item:nth-of-type(4) {
+     grid-area: Container-right;
+}
+.item:nth-of-type(5) {
+      grid-area: Footer;
+}
+
+
+
