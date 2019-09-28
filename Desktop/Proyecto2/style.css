@@ -1,41 +1,60 @@
 body {
-    text-align: center;
-    font-family: "Arial";
-    background: rosybrown;
+    background: whitesmoke;
+    padding: 15px;
 }
 
 .container {
-
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
     display:grid;
     grid-template: repeat(3 ,1fr) / repeat(3, 1fr);
     height: 100vh;
-    grid-gap:10px;
     grid-template-areas:  "Header Header Header"
                           "Nav Container-left Container-right"
-                          "Nav Footer Footer " 
+                          "Nav Footer Footer " ;
+                          
+}
+
+.item:hover {
+    background: grey !important;
+    border-radius: 20px;
+}
+
+.item:active {
+    background: grey;
 }
 
 .item {
-    border: 1px solid black;
+    justify-content: center;
+    font-family: "Arial";
 }
 
 .item:nth-of-type(1) {
      grid-area: Header;
+     background: red;
+     
+
 }
 
 .item:nth-of-type(2) {
     grid-area: Nav;
+    background: blue;
 }
 
 .item:nth-of-type(3) {
     grid-area: Container-left;
+    background: yellow;
 }
 
 .item:nth-of-type(4) {
      grid-area: Container-right;
+     background: green;
+
 }
 .item:nth-of-type(5) {
       grid-area: Footer;
+      background: brown;
 }
 
 
